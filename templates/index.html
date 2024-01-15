@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Heart Disease Prediction</title>
+    <link href="/static/css/style.css" rel="stylesheet">
+        
+</head>
+
+    <body style="background-color: #FAF9F6;">
+    <div class="container-sm mt-3 mb-4">
+        <h2 style="color: blue;">Heart Disease Prediction</h2>
+    </div>
+    <form action="heart" method="get">
+        <div class="container-sm input-group mb-3 mt-3">
+            <span class="input-group-text" id="basic-addon1">Age</span>
+            <input name="Age" type="text" class="form-control" aria-label="Age" aria-describedby="basic-addon1">
+        </div>
+
+        <div class="container-sm input-group mb-3 mt-3">
+            <span class="input-group-text" id="basic-addon1">RestingBP</span>
+            <input name="RestingBP" type="text" class="form-control" aria-label="RestingBP"
+                aria-describedby="basic-addon1">
+        </div>
+        <div class="container-sm input-group mb-3 mt-3">
+            <span class="input-group-text" id="basic-addon1">Cholesterol</span>
+            <input name="Cholesterol" type="text" class="form-control" aria-label="Cholesterol"
+                aria-describedby="basic-addon1">
+        </div>
+        <div class="container-sm input-group mb-3 mt-3">
+            <span class="input-group-text" id="basic-addon1">FastingBS</span>
+            <input name="FastingBS" type="text" class="form-control" aria-label="FastingBS"
+                aria-describedby="basic-addon1">
+        </div>
+        <div class="container-sm input-group mb-3 mt-3">
+            <span class="input-group-text" id="basic-addon1">MaxHR</span>
+            <input name="MaxHR" type="text" class="form-control" aria-label="MaxHR" aria-describedby="basic-addon1">
+        </div>
+        <div class="container-sm input-group mb-3 mt-3">
+            <span class="input-group-text" id="basic-addon1">Oldpeak</span>
+            <input name="Oldpeak" type="text" class="form-control" aria-label="Oldpeak" aria-describedby="basic-addon1">
+        </div>
+        <div class="container-sm">
+            <div class="row g-3">
+
+                <div class="container-sm input-group mb-3 mt-3 col">
+                    <span class="input-group-text" id="basic-addon1">Gender</span>
+                    <select id="Sex" name="Sex" class="form-select">
+                        <option value=0>Female</option>
+                        <option value=1>Male</option>
+                    </select>
+                </div>
+                <div class="container-sm input-group mb-3 mt-3 col">
+                    <span class="input-group-text" id="basic-addon1">ChestPainType</span>
+                    <select id="state" name="ChestPainType" class="form-select">
+                        <option value=0>ASY</option>
+                        <option value=1>ATA</option>
+                        <option value=2>NAP</option>
+                        <option value=3>TA</option>
+                    </select>
+                </div>
+                <div class="container-sm input-group mb-3 mt-3 col">
+                    <span class="input-group-text" id="basic-addon1">RestingECG</span>
+                    <select id="RestingECG" name="RestingECG" class="form-select">
+                        <option value=0>LVH</option>
+                        <option value=1>Normal</option>
+                        <option value=2>ST</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-2">
+                <div class="container-sm input-group mb-3 mt-3 col">
+                    <span class="input-group-text" id="basic-addon1">ExerciseAngina</span>
+                    <select id="ExerciseAngina" name="ExerciseAngina" class="form-select">
+                        <option value=0>N</option>
+                        <option value=1>Y</option>
+                    </select>
+                </div>
+                <div class="container-sm input-group mb-3 mt-3 col">
+                    <span class="input-group-text" id="basic-addon1">ST_Slope</span>
+                    <select id="ST_Slope" name="ST_Slope" class="form-select">
+                        <option value=0>Down</option>
+                        <option value=1>Flat</option>
+                        <option value=2>Up</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="col-12 container-sm">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </div>
+        <script src="/static/js/min.js"></script>
+            
+    </form>
+    <div class="col-12 container-sm ml-2">
+        <h3>{{OUTPUT}}</h3>
+    </div>
+</div>
+</body>
+
+</html>
